@@ -1,4 +1,4 @@
-declare module '*.scss' {
+declare module '*.scss' {//Чтобы работали импорты опрделенные
     interface IClassNames {
         [className: string]: string
     }
