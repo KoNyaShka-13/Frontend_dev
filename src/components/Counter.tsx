@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import classes from './Counter.module.scss';
+import classes from './Counter.module.scss';//Чтобы текстовый редактор видел, что и откуда импортируется, как в данном случае, нужен файл global.d.ts
 
 const Counter = () => {
     const [count, setCount] = useState(0);
