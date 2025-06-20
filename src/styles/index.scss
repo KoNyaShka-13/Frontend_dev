@@ -1,0 +1,14 @@
+//Это корневой scss, где настраивается весь сайт
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
+
+.app {
+    font: var(--font-m);//Достаем шрифт, который будет по умолчанию
+
+    background: var(--bg-color);
+    color: var(--primary-color);
+
+    min-height: 100vh;
+}

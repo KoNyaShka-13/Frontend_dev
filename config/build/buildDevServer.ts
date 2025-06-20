@@ -5,7 +5,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     return {
         port: options.port,//Достаем порт из опций вебпака конфига
         open: true,//Автоматически будет открывать страницу с приложением
-        historyApiFallback: true,//Помогает проксировать страницы через корневую страницу(используется при создании одностраничных приложений)
+        historyApiFallback: true,//Помогает проксировать страницы через корневую страницу(используется, где только одна html страница)
     }
 }
 
