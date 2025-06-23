@@ -4,21 +4,22 @@ import './styles/index.scss';
 //import {AboutPageAsync} from "pages/AboutPage/ui/AboutPage.async";//Без скобок и асинка не будет работать
 //import {MainPageAsync} from "pages/MainPage/ui/MainPage.async";
 //Если правильно написал, но ошибка есть, можно попробовать просто переписать заново, бывает, срабатывает
-import {useTheme} from "app/providers/ThemeProviders/lib/useTheme";//Чтобы динамически изменять темы
-import { classNames } from "shared/lib/classNames/classNames";
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
+//import {useTheme} from "app/providers/ThemeProviders/lib/useTheme";//Чтобы динамически изменять темы
+import {useTheme} from "app/providers/ThemeProviders";
+import { classNames } from "shared/lib/classNames/classNames";//Почему-то эта строчка и строчка выше равнозначны, хоть эта не идет глубоко
+//import { AboutPage } from 'pages/AboutPage';
+//import { MainPage } from 'pages/MainPage';
 import { AppRouter } from './providers/router';
+import { Navbar } from 'widgets/Navbar';
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
     return (
         //<div className={`app ${theme}`}> Если не было бы хелпера, то классы закидывал бы так
         <div className={classNames('app', {}, [theme])}>    
-            <button onClick={toggleTheme}>Тема</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О сайте</Link>
+            <Navbar />
             <AppRouter />
+            <button onClick={toggleTheme}>Тема</button>
         </div>
     );
 };

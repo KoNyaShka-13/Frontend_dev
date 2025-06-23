@@ -1,7 +1,7 @@
 
 type Mods = Record<string, boolean | string>
 
-export function classNames(cls: string, mods: Mods, additional: string[]): string {
+export function classNames(cls: string, mods: Mods ={}, additional: string[] = []): string {//Тем самым они не обязательны, так как уже проинициализированы
     return [
         cls,
         ...additional,
