@@ -12,3 +12,12 @@
 
     min-height: 100vh;
 }
+
+.content-page {
+    display: flex;
+}
+
+.page-wrapper {
+    flex-grow: 1;//Чтобы по максимуму заполнил страницу, но не трогая другие детали страницы
+    padding: 20px;
+}

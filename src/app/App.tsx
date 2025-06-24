@@ -11,6 +11,7 @@ import { classNames } from "shared/lib/classNames/classNames";//Почему-т�
 //import { MainPage } from 'pages/MainPage';
 import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
     const { theme } = useTheme();//Удалять полностью нельзя, так как темы вешаются на корневой блок
@@ -18,7 +19,11 @@ const App = () => {
         //<div className={`app ${theme}`}> Если не было бы хелпера, то классы закидывал бы так
         <div className={classNames('app', {}, [theme])}>    
             <Navbar />
-            <AppRouter />
+            <div className='content-page'>
+                <Sidebar />
+                <AppRouter />
+            </div>
+            
             
         </div>
     );

@@ -8,10 +8,10 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
-    const [collapsed, setCollapsed] = useState(false)
-
+    const [collapsed, setCollapsed] = useState(false)//Состояние, которое отвечает за свернутость и развернутость сайдбара
+    //По умолчанию он развернут
     const onToggle = () => {
-        setCollapsed(prev => !prev);
+        setCollapsed(prev => !prev);//В сет стейт можно передовать колл бек который принимает предыдущее значение, просто, напоминание
     }
 
     return (

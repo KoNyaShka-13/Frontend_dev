@@ -12,7 +12,9 @@ const AppRouter = () => {
                         path={path}
                         element={(
                             <Suspense fallback={<div>Loading...</div>}>
-                                {element}
+                                <div className="page-wrapper">
+                                    {element}
+                                </div>
                             </Suspense>//Два раза в suspense не должно быть обернуто, если что. Так не правильно
                         )}//Так выглядит структура импортируемого компонента
                     />

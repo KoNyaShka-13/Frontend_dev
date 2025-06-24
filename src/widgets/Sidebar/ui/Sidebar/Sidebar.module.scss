@@ -3,11 +3,11 @@
     width: var(--sidebar-width);
     background: var(--inverted-bg-color);
 
-    position: relative;
+    position: relative;//Позиционирование ставим относительное, чтобы потом правильно поставить кнопку
     transition: width 0.3s;
 }
 
-.collapsed {
+.collapsed {//Свернутый вид
     width: var(--sidebar-width-collapsed);
 }
 
