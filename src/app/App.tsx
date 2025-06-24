@@ -13,13 +13,13 @@ import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
 
 const App = () => {
-    const {theme, toggleTheme} = useTheme();
+    const { theme } = useTheme();//Удалять полностью нельзя, так как темы вешаются на корневой блок
     return (
         //<div className={`app ${theme}`}> Если не было бы хелпера, то классы закидывал бы так
         <div className={classNames('app', {}, [theme])}>    
             <Navbar />
             <AppRouter />
-            <button onClick={toggleTheme}>Тема</button>
+            
         </div>
     );
 };

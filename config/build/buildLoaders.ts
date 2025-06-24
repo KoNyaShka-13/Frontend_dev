@@ -5,6 +5,12 @@ import {BuildOptions} from "./types/config";
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 //babel-loader не нужен, так как мы пишем на ts
 //Лоадеры нужно ставить в определенном порядке
+    
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
+    }
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [//Они должны идти в строгом порядке
@@ -31,7 +37,19 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     }
 
+    const fileLoader = {//Чтобы картинки и другие расширения работали
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,//Тут кинул и расширения шрифтов
+        use: [
+            {
+                loader: 'file-loader'
+            }
+        ]
+    }
+
+
     return [
+        fileLoader,
+        svgLoader,
         typescriptLoader,
         cssLoader,
     ]
