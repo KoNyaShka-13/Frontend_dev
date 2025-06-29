@@ -1,4 +1,4 @@
-declare module '*.scss' {//Чтобы работали импорты опрделенные
+declare module '*.scss' {// Чтобы работали импорты опрделенные
     interface IClassNames {
         [className: string]: string
     }
@@ -6,7 +6,7 @@ declare module '*.scss' {//Чтобы работали импорты опрде
     export = classnames;
 }
 
-declare module '*.png';//Декларации, чтобы другие расширения работали, сначала их надоо загрузить, кинуть в Билдлоадерс, чтобы их закинуть и тут прописать тоже надо
+declare module '*.png';// Декларации, чтобы другие расширения работали, сначала их надоо загрузить, кинуть в Билдлоадерс, чтобы их закинуть и тут прописать тоже надо
 declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.svg' {
@@ -16,4 +16,4 @@ declare module '*.svg' {
     export default SVG;
 }
 
-declare const __IS_DEV__: boolean;//Задекларировали, чтобы не было ошибок
+declare const __IS_DEV__: boolean;// Задекларировали, чтобы не было ошибок
