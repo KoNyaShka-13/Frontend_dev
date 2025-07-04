@@ -10,7 +10,7 @@ interface ErrorPageProps {
 export const ErrorPage = ({ className }: ErrorPageProps) => {
     const { t } = useTranslation();
 
-    const reloadPage = () => {
+    const reloadPage = () => { // Строчку ниже не удалять
         // eslint-disable-next-line no-restricted-globals
         location.reload();
     };

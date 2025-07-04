@@ -2,9 +2,10 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 // import path from "path";
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     return [// Плагины можно ставить в любом порядке в отличие от лоадеров
         new HTMLWebpackPlugin({
             // Будем использовать файл из паблика, как шаблон, чтобы в него все скрипты вслаивались
@@ -18,6 +19,10 @@ export function buildPlugins({ paths }: BuildOptions): webpack.WebpackPluginInst
         }),
         new webpack.DefinePlugin({ // Можем пробрасывать глобальные ппеременные
             __IS_DEV__: JSON.stringify(true),
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin({ // Чтобы на постоянке аналайзер не вылезал
+            openAnalyzer: false,
         }),
     ];
 }
