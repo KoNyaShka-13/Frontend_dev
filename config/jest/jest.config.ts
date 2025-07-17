@@ -35,6 +35,10 @@ export default {
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)', // Регулярка, по которой находим файлы с тестами
     ],
     rootDir: '../../', // Тут показываем, как добраться до корневой папки
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],//Для тестов
+    moduleNameMapper: {
+        '\\.(s?css)$': 'identity-odj-proxy', // Чтобы scss читался джестом и тестами
+    }
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
