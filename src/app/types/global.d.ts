@@ -2,8 +2,8 @@ declare module '*.scss' {// Чтобы работали импорты опрд�
     interface IClassNames {
         [className: string]: string
     }
-    const classnames: IClassNames;
-    export = classnames;
+    const classNames: IClassNames;
+    export = classNames;
 }
 
 declare module '*.png';// Декларации, чтобы другие расширения работали, сначала их надоо загрузить, кинуть в Билдлоадерс, чтобы их закинуть и тут прописать тоже надо
