@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './styles/index.scss';
-import { useTheme } from 'app/providers/ThemeProviders';
+import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';// Почему-то эта строчка и строчка выше равнозначны, хоть эта не идет глубоко
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';

@@ -23,5 +23,11 @@ export default (env: BuildEnv) => {
         port: PORT,
     });
 
+    // Добавляем DefinePlugin в плагины Webpack
+    config.plugins?.push(
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(isDev),
+        })
+    );
     return config;
 };

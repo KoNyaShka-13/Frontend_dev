@@ -35,10 +35,15 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "types": ["webpack-env"],
+      "typeRoots": ["node_modules/@types", "src/globals.d.ts", "src/@types"]
     }
   },
   "include": [
-    "./config/jest/setupTests.ts" // "Дружим конфиг с сетапом"
+    "./config/jest/setupTests.ts", // "Дружим конфиг с сетапом"
+    "src/**/*.ts",// Чтобы конфиг мог прочитать и другие файлы, к примеру, без этих строк, глообал тс не хотел читаться
+    "src/**/*.d.ts",
+    "src/**/*.tsx"
   ]
 }
