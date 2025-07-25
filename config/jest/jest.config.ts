@@ -40,10 +40,10 @@ export default {
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)', // Регулярка, по которой находим файлы с тестами
     ],
     rootDir: '../../', // Тут показываем, как добраться до корневой папки
-    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],//Для тестов
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'], // Для тестов
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy', // Чтобы scss читался джестом и тестами
-        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'), //Чтобы читались свг
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'), // Чтобы читались свг
     },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,

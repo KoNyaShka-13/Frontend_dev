@@ -27,7 +27,7 @@ export default (env: BuildEnv) => {
     config.plugins?.push(
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
-        })
+        }),
     );
     return config;
 };

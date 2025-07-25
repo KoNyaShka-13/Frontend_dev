@@ -15,7 +15,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         new webpack.ProgressPlugin(), // Отображает прогресс
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css',// Понадобится, когда мы будем разбивать файлы на асинхронные и синхронные
+            chunkFilename: 'css/[name].[contenthash:8].css', // Понадобится, когда мы будем разбивать файлы на асинхронные и синхронные
         }),
         new webpack.DefinePlugin({ // Можем пробрасывать глобальные ппеременные
             __IS_DEV__: JSON.stringify(true),
@@ -25,6 +25,4 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
             openAnalyzer: false,
         }),
     ];
-
-    
 }

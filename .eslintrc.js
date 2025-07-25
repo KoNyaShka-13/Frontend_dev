@@ -44,7 +44,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }], // Чтобы не ругался на отсутсвие переводов
+        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to']}], // Чтобы не ругался на отсутсвие переводов
     },
     globals: {
         __IS_DEV__: true,
