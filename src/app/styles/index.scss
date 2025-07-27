@@ -1,8 +1,9 @@
-//Это корневой scss, где настраивается весь сайт
-@import "reset";
-@import "variables/global";
-@import "themes/normal";
-@import "themes/dark";
+/* stylelint-disable CssSyntaxError */
+// Это корневой scss, где настраивается весь сайт
+@import 'reset';
+@import 'variables/global';
+@import 'themes/normal';
+@import 'themes/dark';
 
 .app {
     font: var(--font-m);//Достаем шрифт, который будет по умолчанию

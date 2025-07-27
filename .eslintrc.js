@@ -37,14 +37,14 @@ module.exports = {
         'no-unused-vars': 'warn', // Предупреждения вместо ошибок для неиспользуемых переменных
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn', // Можно делать спред пропсов, в некоторых ситуациях так можно, по этому делаем варнинг
+        'react/jsx-props-no-spreading': 'warn', // Можно делать спред пропсов, в некоторых ситуациях так разрешается, по этому делаем варнинг
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to']}], // Чтобы не ругался на отсутсвие переводов
+        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }], // Чтобы не ругался на отсутсвие переводов в определенных местах
     },
     globals: {
         __IS_DEV__: true,
